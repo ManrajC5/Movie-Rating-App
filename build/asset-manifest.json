@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Movie-Rating-App/static/css/main.6cce4e08.css",
+    "main.js": "/Movie-Rating-App/static/js/main.b4369a3d.js",
+    "index.html": "/Movie-Rating-App/index.html",
+    "main.6cce4e08.css.map": "/Movie-Rating-App/static/css/main.6cce4e08.css.map",
+    "main.b4369a3d.js.map": "/Movie-Rating-App/static/js/main.b4369a3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cce4e08.css",
+    "static/js/main.b4369a3d.js"
+  ]
+}
