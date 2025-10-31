@@ -1,38 +1,126 @@
-.App {
+/* Reset and base */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: rgb(239, 236, 236);
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #2c3d4f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Search + Sort Controls */
+.controls {
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.controls input,
+.controls select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid white;
+  font-size: 1em;
+  background-color: white;
+}
+
+/* Movie grid */
+.movie_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Movie cards */
+.movie_card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.movie_card:hover {
+  transform: scale(1.03);
+}
+
+.movie_card img {
+  width: calc(100% - 60px);
+  height: 300px;
+  object-fit: cover;
+  margin: 25px;
+  border-radius: 8px;
+}
+
+.movie_info {
+  padding: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie_info h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie_info p {
+  margin: 3px 0;
+  color: #000000;
+  font-size: 0.9em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Footer + Pagination */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  margin-top: auto;
+}
+
+footer button {
+  background-color: #3092f4;
   color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0 5px;
 }
 
-.App-link {
-  color: #61dafb;
+footer button:hover {
+  background-color: #346da2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#page_number {
+  margin: 0 10px;
+  font-weight: bold;
 }
